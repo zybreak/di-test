@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.29.20240416 FATAL_ERROR)
+
+set(CMAKE_C_COMPILER "clang")
+set(CMAKE_CXX_COMPILER "clang++")
+string(APPEND CMAKE_CXX_FLAGS_INIT "-stdlib=libc++")
+set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
+
+project(test VERSION 1 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+add_executable(test main.cpp)
+
